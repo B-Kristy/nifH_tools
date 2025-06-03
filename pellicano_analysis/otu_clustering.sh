@@ -4,7 +4,7 @@
 # First, dereplicate the sequences
 module purge
 module load MiniForge3
-conda activate
+conda activate hmmer
 
 nifH_hmm=/mnt/research/EvansLab/Isabella/nifH_tools/nifH_hmms/nifhmm_nuc_1160_nifH.hmm
 merged_fastq_dir=/mnt/research/EvansLab/Isabella/merged_fastq
