@@ -9,3 +9,9 @@ merged_fastq_dir=/mnt/research/EvansLab/Isabella/merged_fastq
 
 # Screen merged, filtered reads using HMMER
 hmmsearch --domtblout hmmOut1.out $nifH_hmm $merged_fastq_dir/merged_reads_filtered.fa
+
+
+##
+1568938 total 
+1568487 accepted
+451 homologs removed
