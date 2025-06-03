@@ -3,7 +3,7 @@
 #!/bin/bash
 # First, dereplicate the sequences
 module purge
-module load MiniForge3
+module load Miniforge3
 conda activate hmmer
 
 nifH_hmm=/mnt/research/EvansLab/Isabella/nifH_tools/nifH_hmms/hmm_nuc_1160_nifH.hmm
