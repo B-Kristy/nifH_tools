@@ -6,8 +6,8 @@ module purge
 module load MiniForge3
 conda activate
 
-nifH_hmm=/mnt/home/kristybr/NifMAP/Resources/hmm_nuc_1160_nifH.hmm
-merged_fastq_dir=/mnt/research/EvansLab/Brandon/Ngrad_2024_nifH/merged_fastq
+nifH_hmm=/mnt/research/EvansLab/Isabella/nifH_tools/nifH_hmms/nifhmm_nuc_1160_nifH.hmm
+merged_fastq_dir=/mnt/research/EvansLab/Isabella/merged_fastq
 usearch=/mnt/research/EvansLab/Software/usearch_linux_x86_12.0-beta
 
 # Dereplicate sequences
