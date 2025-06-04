@@ -12,5 +12,5 @@ ant -f Framebot/build.xml jar
 
 
 # Translate OTU representative sequences into protein sequences
-cd $merged_fastq_dir
-$framebot FrameBot framebot -N -l 30 -i 0.4 -o $merged_fastq_dir $nifH_prot_ref $merged_fastq_dir/rep_seqs.fa
+cd $framebot
+FrameBot framebot -N -l 30 -i 0.4 -o $merged_fastq_dir $nifH_prot_ref $merged_fastq_dir/rep_seqs.fa
