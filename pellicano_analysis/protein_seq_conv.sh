@@ -3,7 +3,7 @@ module purge
 module load Miniforge3
 conda activate framebot
 ant -f Framebot/build.xml jar
-cd /mnt/home/f011521/RDPTools/
+cd /mnt/home/f0111521/RDPTools/
 Framebot framebot
 
 merged_fastq_dir=/mnt/research/EvansLab/Isabella/merged_fastq
