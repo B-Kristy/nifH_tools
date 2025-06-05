@@ -9,9 +9,6 @@ prot_hmm_dir=/mnt/research/EvansLab/Isabella/nifH_tools/nifH_hmms/
 # Corrected AA sequences are in _corr_prot.fasta
 # Screen with hmm to identify all hits
 
-# First - press the homolog hmm prior to running hmmscan - code will not run unless you do this
-hmmpress $prot_hmm_dir/nifH_chlL_bchX.hmm
-
 # hmmscan param
 eVal_chL=1e-50
 score_chL=150
