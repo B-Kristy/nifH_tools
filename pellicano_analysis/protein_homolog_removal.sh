@@ -23,9 +23,9 @@ cat hmmOut2.out | awk 'NR>3{if($8>bitarray[$4]){bitarray[$4]=$8;outArray[$4]=$1"
 
 grep "nifH" assignments.txt | awk '{print $2}' | sort > acceptable_hits
 grep ">" $merged_fastq_dir/merged_fastq_corr_nucl.fasta | awk '{print $1}' | grep -v -F -f acceptable_hits | sed 's/>//'> protein_homologs
-totalOTUs= grep ">" $merged_fastq_dir/merged_fastq_corr_nucl.fasta | wc -l # 7484 OTUs
-totalAccepted= cat acceptable_hits | wc -l # 2451 OTUs
-totalRemoved= cat protein_homologs | wc -l # 5033 OTUs removed as partial nifH or homologous protein sequences 
+totalOTUs=grep ">" $merged_fastq_dir/merged_fastq_corr_nucl.fasta | wc -l 
+totalAccepted=cat acceptable_hits | wc -l 
+totalRemoved=cat protein_homologs | wc -l 
 
 
 #mv ${RESULTSFOLDER}/${inputReads} ${WORKFOLDER}/${inputReads}
