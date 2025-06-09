@@ -5,6 +5,8 @@ module load Miniforge3
 conda activate qiime2
 
 #get reference data set and import as qiime artifacts
+cd /mnt/research/EvansLab/Isabella/nifH_tools/pellicano_analysis
+
 wget -O "85_otu_taxonomy.txt" "https://data.qiime2.org/2024.10/tutorials/training-feature-classifiers/85_otu_taxonomy.txt"
 
 qiime tools import --type 'FeatureData[Sequence]' --input-path 85_otus.fasta --output-path 85_otus.qza
