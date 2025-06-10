@@ -1,0 +1,23 @@
+#!/bin/bash --login
+########## SBATCH Lines for Resource Request ##########
+
+#SBATCH --time=50:00:00             # limit of wall clock time - how long the job will run (same as -t)
+#SBATCH --nodes=1                   # number of different nodes - could be an exact number or a range of nodes (same as -N)
+#SBATCH --ntasks=1                 # number of tasks - how many tasks (nodes) that you require (same as -n)
+#SBATCH --cpus-per-task=1          # number of CPUs (or cores) per task (same as -c)
+#SBATCH --mem-per-cpu=64G          # memory required per allocated CPU (or core)
+#SBATCH --job-name taxa_search       # you can give your job a name for easier identification (same as -J)
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=kristybr@msu.edu
+
+########## Command Lines for Job Running ##########
+module purge
+module load Conda/3
+
+cd /mnt/research/EvansLab/nifH_databases/Gaby_Buckley/
+
+# Access the Enterez NCBI Database to obtain the taxonomic lineage of each corresponding accession ID 
+for i in `cat accession_ids`; do printf ${i}"\t"; esearch -db nuccore -query ${i} | elink -target taxonomy | efetch -format xml | \
+xtract -pattern Taxon -element ScientificName,Lineage; done > accession_taxonomy
+
+
