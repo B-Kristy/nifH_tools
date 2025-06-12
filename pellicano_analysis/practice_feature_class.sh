@@ -6,7 +6,7 @@ conda activate qiime2
 
 #get reference data set and import as qiime artifacts
 cd /mnt/research/EvansLab/Isabella/nifH_tools/pellicano_analysis
-
+wget -O "85_otus.fasta" "https://data.qiime2.org/2024.10/tutorials/training-feature-classifiers/85_otus.fasta"
 wget -O "85_otu_taxonomy.txt" "https://data.qiime2.org/2024.10/tutorials/training-feature-classifiers/85_otu_taxonomy.txt"
 
 qiime tools import --type 'FeatureData[Sequence]' --input-path 85_otus.fasta --output-path 85_otus.qza
@@ -24,3 +24,4 @@ wget -O "rep-seqs.qza" "https://data.qiime2.org/2024.10/tutorials/training-featu
 qiime feature-classifier classify-sklearn --i-classifier classifier.qza --i-reads rep-seqs.qza --o-classification taxonomy.qza
 
 qiime metadata tabulate --m-input-file taxonomy.qza --o-visualization taxonomy.qzv
+
